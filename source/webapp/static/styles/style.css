@@ -1,0 +1,28 @@
+.image {
+    width: 300px;
+    height: auto;
+}
+
+.main_cat {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.main {
+    margin: 0 auto;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.text {
+    padding: 50px 10px;
+}
+
+.form {
+    margin: 0 auto;
+    margin-left: 40px;
+    margin-top: 30px;
+    padding: 10px 20px;
+}

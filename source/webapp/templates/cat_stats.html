@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    
+</head>
+<body>
+<div class="main">
+    <img class="image" src="{% static avatar %}" alt="">
+    <p class="text">Кот - {{ name }} <br>
+    Возраст - {{ age }}<br>
+    Уровень счастья - {{ happiness }}<br>
+    Уровень сытости - {{ satiety }}</p><br>
+</div>
+
+<div class="form" >
+    <form action="/cat_stats/" method="post">
+    {% csrf_token %}
+    <label for="action">Выберите действие</label><br>
+    <select name="action" id="action">
+    {#    <option disabled>Выберите действие</option>#}
+        <option value="play">играть с котом</option>
+        <option value="feed">покормить кота</option>
+        <option value="sleep">уложить спать кота</option>
+    </select>
+    <br><br>
+    <button type="submit">потвердить</button>
+    </form>
+</div>
+
+</body>
+</html>
